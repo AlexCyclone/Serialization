@@ -26,7 +26,7 @@ public class Main {
         System.out.println(dsrB);
     }
 
-    public static ClassA fillA(){
+    public static ClassA fillA() {
         ClassA a = new ClassA();
         a.setBoolValue(true);
         a.setDoubleValue(1.11);
@@ -35,7 +35,7 @@ public class Main {
         return a;
     }
 
-    public static ClassB fillB(){
+    public static ClassB fillB() {
         ClassB b = new ClassB();
         b.setIntValueB(2);
         b.setStringValueB("BB");

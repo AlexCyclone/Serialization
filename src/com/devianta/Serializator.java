@@ -141,8 +141,6 @@ public class Serializator {
         return obj;
     }
 
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
     private void deserialize(ArrayList<String> strFlds, ArrayList<Field> savedFlds, Object obj) {
         try {
             for (Field fld : savedFlds) {
@@ -202,36 +200,36 @@ public class Serializator {
     private void fillParsered() throws NoSuchMethodException {
         Class<?> f = Field.class;
 
-        serializable.put(byte.class, new Method[] { f.getMethod("getByte", Object.class),
+        serializable.put(byte.class, new Method[]{f.getMethod("getByte", Object.class),
                 f.getMethod("setByte", Object.class, byte.class),
-                Byte.class.getMethod("parseByte", String.class) });
-        serializable.put(short.class, new Method[] { f.getMethod("getShort", Object.class),
+                Byte.class.getMethod("parseByte", String.class)});
+        serializable.put(short.class, new Method[]{f.getMethod("getShort", Object.class),
                 f.getMethod("setShort", Object.class, short.class),
-                Short.class.getMethod("parseShort", String.class) });
-        serializable.put(int.class, new Method[] { f.getMethod("getInt", Object.class),
+                Short.class.getMethod("parseShort", String.class)});
+        serializable.put(int.class, new Method[]{f.getMethod("getInt", Object.class),
                 f.getMethod("setInt", Object.class, int.class),
-                Integer.class.getMethod("parseInt", String.class) });
-        serializable.put(long.class, new Method[] { f.getMethod("getLong", Object.class),
+                Integer.class.getMethod("parseInt", String.class)});
+        serializable.put(long.class, new Method[]{f.getMethod("getLong", Object.class),
                 f.getMethod("setLong", Object.class, long.class),
-                Long.class.getMethod("parseLong", String.class) });
-        serializable.put(float.class, new Method[] { f.getMethod("getFloat", Object.class),
+                Long.class.getMethod("parseLong", String.class)});
+        serializable.put(float.class, new Method[]{f.getMethod("getFloat", Object.class),
                 f.getMethod("setFloat", Object.class, float.class),
-                Float.class.getMethod("parseFloat", String.class) });
-        serializable.put(double.class, new Method[] { f.getMethod("getDouble", Object.class),
+                Float.class.getMethod("parseFloat", String.class)});
+        serializable.put(double.class, new Method[]{f.getMethod("getDouble", Object.class),
                 f.getMethod("setDouble", Object.class, double.class),
-                Double.class.getMethod("parseDouble", String.class) });
-        serializable.put(boolean.class, new Method[] { f.getMethod("getBoolean", Object.class),
+                Double.class.getMethod("parseDouble", String.class)});
+        serializable.put(boolean.class, new Method[]{f.getMethod("getBoolean", Object.class),
                 f.getMethod("setBoolean", Object.class, boolean.class),
-                Boolean.class.getMethod("parseBoolean", String.class) });
+                Boolean.class.getMethod("parseBoolean", String.class)});
     }
 
     private void fillOther() throws NoSuchMethodException {
         Class<?> f = Field.class;
 
-        serializable.put(char.class, new Method[] { f.getMethod("getChar", Object.class),
-                f.getMethod("setChar", Object.class, char.class) });
-        serializable.put(String.class, new Method[] { f.getMethod("get", Object.class),
-                f.getMethod("set", Object.class, Object.class) });
+        serializable.put(char.class, new Method[]{f.getMethod("getChar", Object.class),
+                f.getMethod("setChar", Object.class, char.class)});
+        serializable.put(String.class, new Method[]{f.getMethod("get", Object.class),
+                f.getMethod("set", Object.class, Object.class)});
     }
 
 }

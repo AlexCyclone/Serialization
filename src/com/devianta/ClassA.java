@@ -44,7 +44,9 @@ public class ClassA {
 
     @Override
     public String toString() {
-        return "ClassA [intValue=" + intValue + ", doubleValue=" + doubleValue + ", stringValue=" + stringValue
+        return "ClassA [intValue=" + intValue
+                + ", doubleValue=" + doubleValue
+                + ", stringValue=" + stringValue
                 + ", boolValue=" + boolValue + "]";
     }
 
