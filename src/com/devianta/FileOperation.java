@@ -13,9 +13,8 @@ public interface FileOperation {
             throw new IllegalArgumentException("Directory found, file expected");
         }
 
-        try (FileWriter wr = new FileWriter(file)) {
-            wr.write(str);
-            wr.flush();
+        try (PrintWriter pw = new PrintWriter(file)) {
+            pw.print(str);
         } catch (IOException e) {
             e.printStackTrace();
         }
